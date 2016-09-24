@@ -28,8 +28,6 @@ RUN mkdir /src/ && \
     mv inspircd-$INSPIRCD_SRC_VERSION /src/ && \
     useradd -u 10000 -d /inspircd/ inspircd && \
     cd /src/inspircd-$INSPIRCD_SRC_VERSION/ && \
-    mv inspircd-$INSPIRCD_SRC_VERSION /src/anope && \
-    cd /src/anope/ && \
     ./configure --enable-extras m_mysql.cpp && \
     ./configure --enable-extras m_regex_pcre.cpp  && \
     ./configure --enable-extras m_regex_posix.cpp && \
