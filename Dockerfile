@@ -24,7 +24,8 @@ RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confdef" \
 
 RUN curl -s --location https://github.com/inspircd/inspircd/archive/v$INSPIRCD_SRC_VERSION.tar.gz --insecure | tar xz
 
-RUN mv inspircd-$INSPIRCD_SRC_VERSION /src/ && \
+RUN mkdir /src/ && \
+    mv inspircd-$INSPIRCD_SRC_VERSION /src/ && \
     useradd -u 10000 -d /inspircd/ inspircd && \
     cd /src/inspircd-$INSPIRCD_SRC_VERSION/ && \
     mv inspircd-$INSPIRCD_SRC_VERSION /src/anope && \
