@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confdef" \
     pkg-config \
     build-essential \
     gnutls-bin \
+    libgnutls-dev \
     openssl \
     libssl-dev \
     libssl1.0.0 \
