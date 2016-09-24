@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confdef" \
     --no-install-recommends && rm -r /var/lib/apt/lists/*
     
 
-RUN curl -s --location https://github.com/inspircd/inspircd/archive/v$INSPIRCD_SRC_VERSION.tar.gz | tar xz
+RUN curl -s --location https://github.com/inspircd/inspircd/archive/v$INSPIRCD_SRC_VERSION.tar.gz --insecure | tar xz
 
 RUN mv inspircd-$INSPIRCD_SRC_VERSION /src/ && \
     useradd -u 10000 -d /inspircd/ inspircd && \
